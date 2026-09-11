@@ -277,3 +277,5 @@ Si en un informe técnico se indica únicamente que se ha examinado
 `resumen.txt`, ¿es suficiente para identificar inequívocamente el archivo?
 
 ¿Qué información adicional sería conveniente proporcionar?
+
+Piense su respuesta antes de continuar.
