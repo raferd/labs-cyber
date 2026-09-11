@@ -108,15 +108,33 @@ operativo para identificar un proceso.
 Cuando hayas conseguido crear, compilar y ejecutar el programa,
 pulsa **CHECK**.
 
-#### Si CHECK indica que la tarea no es correcta, entonces debes comprobar :
+### Si CHECK indica que la tarea no es correcta
 
-- que el archivo se llama exactamente `programa.c`;
-- que lo has guardado desde `vi`;
-- que has compilado con:
+Comprueba lo siguiente:
 
-  `gcc programa.c -o programa`
+- El archivo se llama exactamente `programa.c`.
+- Has guardado el archivo antes de salir de `vi`.
+- Has compilado el programa con:
 
-- que existe el archivo ejecutable `programa`;
-- que al ejecutar `./programa` se muestra una línea que comienza por:
+```bash
+gcc programa.c -o programa
+```
 
-  `Hola. Mi PID es` seguida de un número
+- Existe el archivo ejecutable `programa`.
+- Puedes ejecutarlo con:
+
+```bash
+./programa
+```
+
+- Su salida comienza por:
+
+```text
+Hola. Mi PID es
+```
+
+Si has cometido algún error al editar el archivo, puedes volver a abrirlo con:
+
+```bash
+vi programa.c
+```
