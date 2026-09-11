@@ -107,3 +107,16 @@ operativo para identificar un proceso.
 
 Cuando hayas conseguido crear, compilar y ejecutar el programa,
 pulsa **CHECK**.
+
+#### Si CHECK indica que la tarea no es correcta, entonces debes comprobar :
+
+- que el archivo se llama exactamente `programa.c`;
+- que lo has guardado desde `vi`;
+- que has compilado con:
+
+  `gcc programa.c -o programa`
+
+- que existe el archivo ejecutable `programa`;
+- que `./programa` muestra una línea que comienza por:
+
+  `Hola. Mi PID es` seguida de un número
