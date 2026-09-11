@@ -1,0 +1,18 @@
+{
+  "title": "Práctica 1 - ¿Qué hay en el sistema?",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Comprobación inicial",
+        "text": "step1/text.md"
+      }
+    ]
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
