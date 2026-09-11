@@ -1,0 +1,198 @@
+\section*{Práctica 2 --- ¿Quién podía hacer qué?}
+\subsection*{Accesos, integridad y procesos con relevancia jurídica}
+
+La organización continúa investigando el incidente analizado en la práctica anterior.
+
+El equipo jurídico necesita ahora responder a varias preguntas:
+\begin{itemize}
+  \item ¿qué usuarios existen en el sistema?;
+  \item ¿qué documentos podía consultar cada uno?;
+  \item ¿estaban correctamente configurados los permisos?;
+  \item ¿podemos comprobar si un archivo ha sido modificado?;
+  \item ¿qué significa que un programa esté ejecutándose?
+\end{itemize}
+
+\textbf{Tiempo previsto: 35--40 minutos.} La práctica está diseñada para completarse en menos de 45 minutos.
+
+\subsection*{1. ¿Quién es quién en el sistema?}
+
+Ejecute:
+\begin{verbatim}
+whoami
+id
+id marta
+id diego
+id responsable
+\end{verbatim}
+
+Observe especialmente la pertenencia a los grupos \texttt{juridico} y \texttt{soporte}.
+
+\paragraph{Pregunta.}
+¿Qué usuarios pertenecen al grupo \texttt{juridico}? ¿Pertenece \texttt{diego} a dicho grupo?
+
+\subsection*{2. ¿Quién puede leer cada documento?}
+
+Examine los documentos:
+\begin{verbatim}
+ls -l /opt/caso02/documentos
+\end{verbatim}
+
+Los permisos tendrán un aspecto similar a:
+\begin{verbatim}
+-rw-r----- ... responsable juridico ... informe_interno.txt
+-rw-r--r-- ... responsable juridico ... contrato_cliente.txt
+\end{verbatim}
+
+Compruebe los accesos:
+\begin{verbatim}
+su -c "cat /opt/caso02/documentos/informe_interno.txt" marta
+su -c "cat /opt/caso02/documentos/informe_interno.txt" diego
+su -c "cat /opt/caso02/documentos/contrato_cliente.txt" diego
+\end{verbatim}
+
+\paragraph{Pregunta.}
+¿Por qué puede \texttt{diego} leer \texttt{contrato\_cliente.txt} si no pertenece al grupo \texttt{juridico}?
+
+\subsection*{3. Corregir un permiso excesivo}
+
+Modifique los permisos:
+\begin{verbatim}
+chmod 640 /opt/caso02/documentos/contrato_cliente.txt
+ls -l /opt/caso02/documentos/contrato_cliente.txt
+\end{verbatim}
+
+Vuelva a comprobar:
+\begin{verbatim}
+su -c "cat /opt/caso02/documentos/contrato_cliente.txt" marta
+su -c "cat /opt/caso02/documentos/contrato_cliente.txt" diego
+\end{verbatim}
+
+\paragraph{Pregunta.}
+¿Permite este dato afirmar que \texttt{diego} nunca llegó a leer el contrato antes de corregir los permisos?
+
+\paragraph{Respuesta.}
+No. Los permisos describen una capacidad de acceso en un determinado momento. Por sí solos no demuestran si un acceso se produjo realmente.
+
+\subsection*{4. Comprobar la integridad}
+
+Calcule y guarde un hash SHA-256:
+\begin{verbatim}
+sha256sum /opt/caso02/documentos/contrato_cliente.txt
+sha256sum /opt/caso02/documentos/contrato_cliente.txt \
+> /opt/caso02/trabajo/hash_original.txt
+cat /opt/caso02/trabajo/hash_original.txt
+\end{verbatim}
+
+Cree una copia y compare:
+\begin{verbatim}
+cp /opt/caso02/documentos/contrato_cliente.txt \
+/opt/caso02/trabajo/contrato_cliente_copia.txt
+
+sha256sum /opt/caso02/documentos/contrato_cliente.txt \
+/opt/caso02/trabajo/contrato_cliente_copia.txt
+\end{verbatim}
+
+Modifique sólo la copia:
+\begin{verbatim}
+echo "Anotación añadida durante la revisión." \
+>> /opt/caso02/trabajo/contrato_cliente_copia.txt
+\end{verbatim}
+
+Vuelva a comparar y verifique el original:
+\begin{verbatim}
+sha256sum /opt/caso02/documentos/contrato_cliente.txt \
+/opt/caso02/trabajo/contrato_cliente_copia.txt
+sha256sum -c /opt/caso02/trabajo/hash_original.txt
+\end{verbatim}
+
+Un hash coincidente proporciona una comprobación muy fuerte de integridad, pero no demuestra por sí solo quién creó o modificó un archivo.
+
+\subsection*{5. De un programa a un proceso}
+
+Sitúese en:
+\begin{verbatim}
+cd /opt/caso02/procesos
+vi proceso.c
+\end{verbatim}
+
+e introduzca:
+\begin{verbatim}
+#include <stdio.h>
+#include <unistd.h>
+
+int main(void)
+{
+    printf("Proceso de prueba iniciado. PID=%d\n", (int)getpid());
+    fflush(stdout);
+    sleep(300);
+    return 0;
+}
+\end{verbatim}
+
+Compile y ejecute:
+\begin{verbatim}
+gcc proceso.c -o proceso
+./proceso &
+echo $! > proceso.pid
+cat proceso.pid
+\end{verbatim}
+
+Un programa es un archivo ejecutable. Un proceso es una instancia de ese programa que se encuentra en ejecución.
+
+\subsection*{6. Examinar y finalizar el proceso}
+
+\begin{verbatim}
+ps -p "$(cat proceso.pid)" -o pid,user,cmd
+kill "$(cat proceso.pid)"
+wait "$(cat proceso.pid)" 2>/dev/null
+ps -p "$(cat proceso.pid)" -o pid,user,cmd
+ls -l
+\end{verbatim}
+
+El proceso habrá desaparecido, pero el archivo ejecutable continúa existiendo.
+
+\paragraph{Pregunta.}
+¿Demuestra la salida actual de \texttt{ps} qué procesos estaban ejecutándose ayer?
+
+\paragraph{Respuesta.}
+No. \texttt{ps} muestra el estado de los procesos cuando se ejecuta la orden. Para estudiar actividad anterior serían necesarias otras fuentes de información.
+
+\subsection*{7. Conclusiones}
+
+Deben conservarse tres ideas:
+\begin{enumerate}
+  \item Tener permiso de acceso no demuestra que dicho acceso se haya producido realmente.
+  \item Un hash permite detectar modificaciones del contenido, pero no demuestra autoría.
+  \item Un proceso es una ejecución concreta de un programa y su observación actual no constituye por sí sola un historial.
+\end{enumerate}
+
+\appendix
+
+\section*{Anexo A. Realización en Killercoda}
+
+La práctica puede realizarse utilizando el escenario preparado por el profesor en Killercoda.
+
+El entorno gratuito es temporal y la sesión tiene una duración máxima aproximada de una hora. Por ello, la práctica está diseñada para completarse en menos de 45 minutos. El sistema del escenario es efímero: al finalizar o reiniciar la sesión pueden perderse los cambios realizados.
+
+Los botones \textbf{CHECK} comprueban determinados estados finales del sistema. No necesariamente permiten determinar qué secuencia exacta de órdenes utilizó el estudiante para alcanzar dicho estado.
+
+\section*{Anexo B. Realización en un sistema Linux local}
+
+Esta práctica crea usuarios y grupos de prueba. Se recomienda realizarla únicamente en una máquina destinada a prácticas, una máquina virtual o un sistema que pueda restaurarse posteriormente.
+
+Cree un archivo denominado \texttt{preparar\_caso02.sh} con el mismo contenido que el archivo \texttt{background.sh} suministrado con la práctica y ejecútelo con:
+\begin{verbatim}
+sudo bash preparar_caso02.sh
+sudo -i
+\end{verbatim}
+
+A partir de ese momento puede seguir los mismos pasos descritos en el cuerpo principal de la práctica.
+
+El sistema necesita disponer al menos de:
+\begin{verbatim}
+vi
+gcc
+ps
+sha256sum
+su
+\end{verbatim}

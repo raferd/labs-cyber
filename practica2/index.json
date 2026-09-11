@@ -1,0 +1,49 @@
+{
+  "title": "Práctica 2 - ¿Quién podía hacer qué? Accesos, integridad y procesos con relevancia jurídica",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Identificar usuarios y grupos",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Determinar quién puede leer qué",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Corregir un permiso excesivo",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Comprobar la integridad",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "De un programa a un proceso",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      },
+      {
+        "title": "Examinar y finalizar un proceso",
+        "text": "step6/text.md",
+        "verify": "step6/verify.sh"
+      },
+      {
+        "title": "Cierre del caso",
+        "text": "step7/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
