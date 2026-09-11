@@ -117,6 +117,6 @@ pulsa **CHECK**.
   `gcc programa.c -o programa`
 
 - que existe el archivo ejecutable `programa`;
-- que `./programa` muestra una línea que comienza por:
+- que al ejecutar `./programa` se muestra una línea que comienza por:
 
   `Hola. Mi PID es` seguida de un número
