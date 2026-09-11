@@ -212,18 +212,68 @@ Sin ejecutar ningún comando todavía, responda:
 4. A partir de ella, escriba la ruta absoluta de
    `informe_incidente.txt`.
 
-### Idea importante
+### Idea importante: el nombre no basta para identificar un archivo
 
-Si dos personas ejecutan:
+En el escenario existen dos archivos llamados:
 
-```bash
-cat informe.txt
+```text
+resumen.txt
 ```
 
-no tienen por qué estar leyendo el mismo archivo.
+pero se encuentran en directorios diferentes.
 
-El resultado depende del directorio en el que se encuentre cada una
-y de la ruta utilizada.
+Sitúese primero en `documentos`:
 
-Por eso, en un análisis técnico es importante identificar
-**con precisión la ubicación de un archivo**.
+```bash
+cd ~/caso/documentos
+```
+
+Muestre el contenido del archivo:
+
+```bash
+cat resumen.txt
+```
+
+Ahora desplácese al directorio `temporal`:
+
+```bash
+cd ../temporal
+```
+
+y ejecute exactamente la misma orden:
+
+```bash
+cat resumen.txt
+```
+
+Observe que el contenido es diferente.
+
+Esto ocurre porque:
+
+```text
+~/caso/documentos/resumen.txt
+```
+
+y:
+
+```text
+~/caso/temporal/resumen.txt
+```
+
+son dos archivos distintos, aunque ambos se llamen `resumen.txt`.
+
+Por tanto, una orden como:
+
+```bash
+cat resumen.txt
+```
+
+se refiere al archivo llamado `resumen.txt` que se encuentra en el
+**directorio de trabajo actual**.
+
+### Pregunta
+
+Si en un informe técnico se indica únicamente que se ha examinado
+`resumen.txt`, ¿es suficiente para identificar inequívocamente el archivo?
+
+¿Qué información adicional sería conveniente proporcionar?
