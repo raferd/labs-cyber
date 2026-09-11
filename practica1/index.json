@@ -37,8 +37,15 @@
         "title": "Eliminar un archivo",
         "text": "step7/text.md",
         "verify": "step7/verify.sh"
+      },
+      {
+        "title": "Cierre del caso",
+        "text": "step8/text.md"
       }
-    ]
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
   },
   "backend": {
     "imageid": "ubuntu"
