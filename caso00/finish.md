@@ -11,4 +11,4 @@ Has utilizado:
 - un programa ejecutable;
 - un proceso identificado mediante su PID.
 
-Ya puedes realizar las prácticas de la asignatura.
+Ya puedes continuar con el resto de prácticas de la asignatura.
