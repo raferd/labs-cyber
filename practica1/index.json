@@ -17,7 +17,12 @@
       {
         "title": "Localizar y examinar documentos",
         "text": "step3/text.md"
-      }      
+      },
+      {
+        "title": "Crear un espacio de trabajo",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      }
     ]
   },
   "backend": {
