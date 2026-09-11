@@ -1,0 +1,6 @@
+{
+  "title": "Caso 00 - Comprobación del entorno",
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
