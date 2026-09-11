@@ -36,6 +36,12 @@ Pendiente revisar los mensajes de correo relacionados con el incidente.
 Pendiente identificar los documentos descargados por el usuario.
 EOF
 
+cat > "$CASO/documentos/resumen.txt" <<'EOF'
+RESUMEN DEL EXPEDIENTE
+
+Documento incorporado a la documentación del caso.
+EOF
+
 # Correos
 cat > "$CASO/correo/mensaje_01.txt" <<'EOF'
 De: responsable@empresa.example
@@ -69,4 +75,10 @@ BORRADOR
 
 Notas preliminares del análisis.
 Este documento todavía no constituye una versión definitiva.
+EOF
+
+cat > "$CASO/temporal/resumen.txt" <<'EOF'
+RESUMEN PROVISIONAL
+
+Borrador pendiente de revisión.
 EOF
