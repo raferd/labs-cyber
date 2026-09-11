@@ -5,16 +5,16 @@
       "text": "intro.md",
       "background": "background.sh"
     },
-   "steps": [
-  {
-    "title": "Orientarse en el sistema de archivos",
-    "text": "step1/text.md"
-  },
-  {
-    "title": "Compruebe su respuesta",
-    "text": "step2/text.md"
-  }
-]
+    "steps": [
+      {
+        "title": "Orientarse en el sistema de archivos",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Compruebe su respuesta",
+        "text": "step2/text.md"
+      }
+    ]
   },
   "backend": {
     "imageid": "ubuntu"
