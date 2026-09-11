@@ -17,7 +17,7 @@ Comprueba que el compilador de C está disponible:
 gcc --version
 ```
 
-### 2. Crear el programa
+### 2. Crear un programa escrito en lenguaje C
 
 Vamos a crear un programa muy sencillo escrito en lenguaje C.
 
