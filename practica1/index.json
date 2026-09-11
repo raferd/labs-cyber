@@ -13,7 +13,11 @@
       {
         "title": "Compruebe su respuesta",
         "text": "step2/text.md"
-      }
+      },
+      {
+        "title": "Localizar y examinar documentos",
+        "text": "step3/text.md"
+      }      
     ]
   },
   "backend": {
