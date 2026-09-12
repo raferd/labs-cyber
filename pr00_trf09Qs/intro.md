@@ -1,4 +1,4 @@
-# Práctica 0 - Comprobación del entorno
+# Práctica 0 - Prueba del entorno Linux
 
 Este escenario sirve para comprobar que el entorno de prácticas funciona correctamente.
 
