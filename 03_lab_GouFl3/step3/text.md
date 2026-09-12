@@ -1,21 +1,87 @@
-## 3. De los nombres a las direcciones IP
+Antes de continuar, compruebe sus respuestas.
 
-Las respuestas del paso anterior son:
+### Respuestas
+
+**1. Comunicación dirigida al puerto 22**
+
+En el registro aparece:
 
 ```text
-443     asociado habitualmente a HTTPS
-
-53      asociado habitualmente a DNS
-
-22      asociado habitualmente a SSH
+2026-09-11T09:15:11Z TCP 10.10.0.24:52344 -> 198.51.100.42:22
 ```
 
-Sin embargo, el número de puerto por sí solo no demuestra qué aplicación
-se utilizó realmente ni qué contenido se transmitió.
+Por tanto:
 
-Es un dato técnico que debe interpretarse junto con otras evidencias.
+```text
+hora             09:15:11Z
+IP de destino    198.51.100.42
+puerto destino   22
+protocolo        TCP
+```
+
+El puerto `22` está habitualmente asociado a SSH, aunque el número de
+puerto por sí solo no demuestra que el tráfico corresponda realmente a SSH.
 
 ---
+
+**2. Comunicación relacionada con DNS**
+
+La línea correspondiente es:
+
+```text
+2026-09-11T09:14:05Z UDP 10.10.0.24:53120 -> 192.0.2.53:53
+```
+
+Por tanto:
+
+```text
+hora             09:14:05Z
+protocolo        UDP
+IP de destino    192.0.2.53
+puerto destino   53
+```
+
+El puerto `53` se utiliza habitualmente para DNS.
+
+---
+
+**3. Orden temporal**
+
+La comunicación dirigida al puerto `443` se registra a:
+
+```text
+09:14:02Z
+```
+
+y la dirigida al puerto `53` a:
+
+```text
+09:14:05Z
+```
+
+Por tanto, la comunicación hacia el puerto `443` aparece primero y entre
+ambas transcurren:
+
+```text
+3 segundos
+```
+
+---
+
+**4. ¿El puerto 443 demuestra que se utilizó HTTPS?**
+
+No.
+
+El puerto `443` está asociado habitualmente a HTTPS, por lo que constituye
+un indicio útil para interpretar la comunicación.
+
+Sin embargo, el número de puerto por sí solo no demuestra qué protocolo de
+aplicación se utilizó realmente ni permite conocer el contenido transmitido.
+
+Es necesario interpretar ese dato junto con otras evidencias.
+
+---
+## 3. De los nombres a las direcciones IP
 
 ### ¿Por qué utilizamos nombres?
 
