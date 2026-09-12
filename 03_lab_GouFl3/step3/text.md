@@ -1,5 +1,3 @@
-Antes de continuar, compruebe sus respuestas.
-
 Respuesta a las preguntas anteriores:
 
 **1. Comunicación dirigida al puerto 22**
