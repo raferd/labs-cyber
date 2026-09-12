@@ -70,7 +70,7 @@ infraestructura cloud
         +-- registros centralizados
 ```
 
-### Qué debe conservar de esta práctica
+### Resumen de conceptos
 
 **Máquina virtual**
 
