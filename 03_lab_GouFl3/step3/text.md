@@ -65,8 +65,6 @@ ambas transcurren:
 ```text
 3 segundos
 ```
-
-<br><br>
 ---
 
 **4. ¿El puerto 443 demuestra que se utilizó HTTPS?**
@@ -81,6 +79,7 @@ aplicación se utilizó realmente ni permite conocer el contenido transmitido.
 
 Es necesario interpretar ese dato junto con otras evidencias.
 
+<br><br>
 ---
 
 ## 3. De los nombres a las direcciones IP
