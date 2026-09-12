@@ -1,0 +1,24 @@
+{
+  "title": "Caso integrado - Presentación del incidente",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Un único caso, cuatro preguntas",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "La regla principal del caso",
+        "text": "step2/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
