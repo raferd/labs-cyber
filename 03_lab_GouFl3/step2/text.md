@@ -15,8 +15,39 @@ preparados para la práctica.
 Encontrará líneas como:
 
 ```text
-TCP 10.10.0.24:52318 -> 203.0.113.25:443
+2026-09-11T09:14:02Z TCP 10.10.0.24:52318 -> 203.0.113.25:443
 ```
+
+En cada línea aparecen varios datos relacionados con una comunicación.
+
+### Marca temporal
+
+El primer dato:
+
+```text
+2026-09-11T09:14:02Z
+```
+
+indica el momento en que se registra el evento.
+
+Podemos interpretarlo como:
+
+```text
+2026-09-11     fecha
+
+09:14:02       hora
+
+Z              hora expresada en UTC
+```
+
+La letra `Z` indica que la hora está expresada en **UTC**
+(*Coordinated Universal Time*).
+
+En un análisis real es importante conocer la referencia temporal utilizada
+por los registros antes de comparar acontecimientos procedentes de
+distintos sistemas.
+
+### Origen y destino
 
 En este registro, la flecha:
 
@@ -27,7 +58,13 @@ En este registro, la flecha:
 indica que la comunicación se representa desde el **origen** hacia el
 **destino**.
 
-Podemos separar varios elementos:
+Por ejemplo:
+
+```text
+TCP 10.10.0.24:52318 -> 203.0.113.25:443
+```
+
+puede separarse en:
 
 ```text
 TCP
@@ -84,7 +121,8 @@ Por ejemplo:
 443     HTTPS
 ```
 
-Observe las tres comunicaciones del registro.
+Observe ahora las tres comunicaciones del registro y utilice toda la
+información disponible para responder a las preguntas.
 
 ### Preguntas
 
