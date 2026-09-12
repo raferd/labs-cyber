@@ -1,7 +1,6 @@
 ## 1. Antes de abrir el expediente: mapa técnico mínimo
 
-Esta práctica puede realizarse antes de estudiar virtualización y nube en
-clase. Por ello, comenzaremos con los conceptos necesarios para interpretar
+Comenzaremos con un resumen de los conceptos necesarios para interpretar
 el caso.
 
 ### Máquina física
@@ -239,9 +238,9 @@ una aplicación ni dónde están físicamente todas sus copias de datos.
   contenedor.
 
 **Kubernetes**
-- automatiza el despliegue, sustitución y escalado de aplicaciones;
-- puede aumentar disponibilidad y facilitar la recuperación ante fallos;
-- añade complejidad y nuevos elementos que deben comprenderse al investigar
+- automatizan el despliegue, sustitución y escalado de aplicaciones;
+- pueden aumentar disponibilidad y facilitar la recuperación ante fallos;
+- añaden complejidad y nuevos elementos que deben comprenderse al investigar
   un incidente;
 - un Pod observado durante el incidente puede no existir ya cuando comienza
   el análisis.
