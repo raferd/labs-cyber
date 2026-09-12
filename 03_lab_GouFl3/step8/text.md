@@ -1,6 +1,6 @@
 ## 8. Cierre del caso
 
-La respuesta a las preguntas anteriores es **no**.
+La respuesta a las preguntas anteriores es **No**.
 
 Una dirección IP y un puerto aportan información técnica importante,
 pero normalmente no bastan por sí solos para determinar:
@@ -14,8 +14,8 @@ Serían necesarias otras fuentes de información y una adecuada
 correlación temporal y técnica.
 
 ---
-
-### Lo que hemos utilizado
+<br><br>
+### Resumen de comandos utilizados
 
 ```text
 hostname          nombre del equipo
@@ -35,7 +35,7 @@ curl              realizar una petición a un servicio
 kill              terminar el proceso servidor
 ```
 
-### Conceptos que debe conservar
+### Resumen de conceptos
 
 #### Dirección IP
 
@@ -93,5 +93,3 @@ IP y puerto
 servicio
 ```
 
-En el siguiente bloque ampliaremos esta visión hacia sistemas distribuidos,
-virtualización y servicios en la nube.
