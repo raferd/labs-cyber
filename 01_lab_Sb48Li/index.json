@@ -1,0 +1,61 @@
+{
+  "title": "Práctica 1 - ¿Dónde está la información? Localización y gestión de documentación digital con relevancia jurídica",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Orientarse en el sistema de archivos",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Compruebe su respuesta",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Localizar y examinar documentos",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Crear un espacio de trabajo",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Crear y modificar observaciones",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      },
+      {
+        "title": "Mover y renombrar archivos",
+        "text": "step6/text.md",
+        "verify": "step6/verify.sh"
+      },
+      {
+        "title": "Eliminar un archivo",
+        "text": "step7/text.md",
+        "verify": "step7/verify.sh"
+      },
+      {
+        "title": "Cierre del caso",
+        "text": "step8/text.md"
+      },
+      {
+        "title": "Pregunta final del caso",
+        "text": "step9/text.md"
+      },
+      {
+        "title": "Respuesta de referencia",
+        "text": "step10/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
