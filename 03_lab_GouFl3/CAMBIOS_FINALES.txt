@@ -1,0 +1,8 @@
+Archivos modificados/añadidos para el cierre final de la Práctica 3.
+
+- step4/text.md: normaliza el formato de respuesta a preguntas anteriores.
+- step8/text.md: conserva el cierre existente y adapta su inicio al formato acordado.
+- step9/text.md: nueva pregunta final.
+- step10/text.md: respuesta de referencia.
+- finish.md: pantalla final "Práctica completada".
+- index.json: incorpora step9 y step10.

@@ -1,0 +1,61 @@
+{
+  "title": "Práctica 3 - ¿Con quién se comunicaba el equipo? Direcciones, nombres, puertos y conexiones con relevancia jurídica",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Identificar el equipo y sus direcciones",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Interpretar un registro de comunicaciones",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Resolver nombres",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Crear un servicio de red",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Examinar un puerto en escucha",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      },
+      {
+        "title": "Realizar una comunicación",
+        "text": "step6/text.md",
+        "verify": "step6/verify.sh"
+      },
+      {
+        "title": "Finalizar el servicio",
+        "text": "step7/text.md",
+        "verify": "step7/verify.sh"
+      },
+      {
+        "title": "Cierre del caso",
+        "text": "step8/text.md"
+      },
+      {
+        "title": "Pregunta final del caso",
+        "text": "step9/text.md"
+      },
+      {
+        "title": "Respuesta de referencia",
+        "text": "step10/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
