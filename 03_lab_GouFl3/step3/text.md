@@ -66,6 +66,7 @@ ambas transcurren:
 3 segundos
 ```
 
+<br><br>
 ---
 
 **4. ¿El puerto 443 demuestra que se utilizó HTTPS?**
