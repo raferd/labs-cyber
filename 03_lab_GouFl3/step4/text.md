@@ -1,5 +1,5 @@
 
-La respuesta a las preguntas anteriores es **no**.
+La respuesta a las preguntas anteriores es **No**.
 
 Una resolución realizada ahora informa sobre la situación actual del
 sistema de nombres.
@@ -11,6 +11,7 @@ Ahora vamos a crear una comunicación cuya existencia conocemos con certeza,
 porque nosotros mismos la controlaremos.
 
 ---
+<br><br>
 ## 4. Crear un servicio de red controlado
 
 ### Un pequeño servidor web
