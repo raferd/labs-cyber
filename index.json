@@ -1,5 +1,8 @@
 {
+  "title": "PRUEBA DE ESTRUCTURA",
   "items": [
-    { "path": "00_lab_trf09Qs" }
+    { "path": "00_lab_trf09Qs",
+      "title": "00 - prueba de estructura"
+    }
   ]
 }
