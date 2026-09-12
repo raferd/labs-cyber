@@ -1,4 +1,3 @@
-## 4. Crear un servicio de red controlado
 
 La respuesta a las preguntas anteriores es **no**.
 
@@ -12,6 +11,7 @@ Ahora vamos a crear una comunicación cuya existencia conocemos con certeza,
 porque nosotros mismos la controlaremos.
 
 ---
+## 4. Crear un servicio de red controlado
 
 ### Un pequeño servidor web
 
