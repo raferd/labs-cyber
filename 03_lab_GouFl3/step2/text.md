@@ -88,10 +88,18 @@ Observe las tres comunicaciones del registro.
 
 ### Preguntas
 
-1. ¿Qué comunicación tiene como destino el puerto `443`?
-2. ¿Qué comunicación tiene como destino el puerto `53`?
-3. ¿Qué comunicación tiene como destino el puerto `22`?
-4. ¿Permite observar el puerto `443` afirmar con absoluta certeza qué
-   contenido se transmitió?
+1. ¿A qué hora se registra la comunicación dirigida al puerto `22`,
+   habitualmente asociado a SSH, y cuál es la dirección IP de destino?
+
+2. ¿Qué comunicación puede relacionarse con DNS por su puerto de destino?
+   Indique la hora, el protocolo de transporte utilizado y la dirección IP
+   de destino.
+
+3. Entre la comunicación dirigida al puerto `443` y la dirigida al puerto
+   `53`, ¿cuál se registra primero y cuántos segundos transcurren entre ambas?
+
+4. Si observamos una comunicación dirigida al puerto `443`,
+   ¿podemos afirmar únicamente con ese dato que se utilizó HTTPS y conocer
+   qué contenido se transmitió?
 
 Piense las respuestas antes de pulsar **NEXT**.
