@@ -81,6 +81,7 @@ aplicación se utilizó realmente ni permite conocer el contenido transmitido.
 Es necesario interpretar ese dato junto con otras evidencias.
 
 ---
+
 ## 3. De los nombres a las direcciones IP
 
 ### ¿Por qué utilizamos nombres?
