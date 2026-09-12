@@ -1,0 +1,7 @@
+Archivos modificados/añadidos para el cierre final de la Práctica 4.
+
+- step7/text.md: conserva el cierre existente y añade la transición a la pregunta final.
+- step8/text.md: nueva pregunta final del caso integrado.
+- step9/text.md: respuesta de referencia y conclusión del caso integrado.
+- finish.md: pantalla final "Práctica completada" actualizada.
+- index.json: incorpora step8 y step9.
