@@ -1,8 +1,10 @@
 {
   "title": "PRUEBA DE ESTRUCTURA",
   "items": [
-    { "path": "00_lab_trf09Qs",
-      "title": "00 - prueba de estructura"
-    }
+    { "path": "00_lab_trf09Qs" },
+    { "path": "01_lab_Sb48Li" },
+    { "path": "02_lab_PdNA06" },
+    { "path": "03_lab_GouFl3" }
   ]
 }
+
