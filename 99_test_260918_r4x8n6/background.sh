@@ -47,4 +47,4 @@ chmod -R a+rX "$BASE"
 chmod 640 "$BASE/documentos/contrato.txt"
 
 nohup sleep 3600 >/dev/null 2>&1 &
-echo $! > "$BASE/sistema/proceso.pid"
+echo $! > "$BASE/sistema/proceso_old.pid"
