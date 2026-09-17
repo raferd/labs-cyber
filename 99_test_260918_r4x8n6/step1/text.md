@@ -7,9 +7,13 @@ El expediente está en:
 ```
 
 ### P1
-¿Cuál es la **ruta completa** del documento cuyo estado es `VALIDADO`?
+¿Cuál es la **ruta absoluta** del documento cuyo contenido indica que su estado es `VALIDADO`?
 
 ### P2
-¿Cuál es el **nombre exacto** del archivo que contiene el estado `BORRADOR`?
+Después de situarse en la carpeta /opt/examen10/ utilizando la instrucción:
+```text
+cd /opt/examen10
+````
+¿Cuál es la **ruta relativa** del documento cuyo contenido indique que su estado es `BORRADOR`?
 
 Anote las respuestas y pulse **NEXT**.
