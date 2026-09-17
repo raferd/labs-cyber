@@ -1,0 +1,33 @@
+{
+  "title": "Examen práctico - Archivos, permisos, integridad y procesos",
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "background.sh"
+    },
+    "steps": [
+      {
+        "title": "Documentos",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Permisos",
+        "text": "step2/text.md"
+      },
+      {
+        "title": "Integridad",
+        "text": "step3/text.md"
+      },
+      {
+        "title": "Procesos",
+        "text": "step4/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}
