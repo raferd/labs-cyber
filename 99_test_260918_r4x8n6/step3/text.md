@@ -12,4 +12,4 @@ hay un original y dos copias.
 ¿Cuál de las dos copias tiene exactamente el mismo contenido que `original.txt`
 según su hash SHA-256?
 
-Anote `A` o `B` y pulse **NEXT**.
+Anote `A` o `B`, así como los cuatro primeros caracteres del hash de `original.txt` y pulse **NEXT**.
