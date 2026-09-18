@@ -43,7 +43,7 @@ más recursos que un contenedor ligero.
 ### Contenedor
 
 Un **contenedor** es un entorno aislado para ejecutar uno o varios procesos
-de una aplicación.
+de **una aplicación**.
 
 En Linux, los contenedores se ejecutan como procesos aislados que comparten
 el kernel del host, aunque pueden tener espacios separados para procesos,
