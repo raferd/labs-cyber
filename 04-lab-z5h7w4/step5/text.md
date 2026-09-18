@@ -23,7 +23,7 @@ investigación: **el entorno original puede ser efímero**.
 La desaparición del Pod no significa que toda la información relacionada
 con el incidente haya desaparecido.
 
-Examine estos tres documentos utilizando las herramientas básicas que ya
+Examine, además, el contenido de estos tres documentos utilizando las herramientas básicas que ya
 conoce:
 
 ```text
