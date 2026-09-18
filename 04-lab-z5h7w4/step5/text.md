@@ -12,7 +12,7 @@ Respuesta a las preguntas anteriores:
    Kubernetes ya había sustituido el Pod y el punto de acceso del servicio
    dirigía las comunicaciones al nuevo Pod.
 
-Una fortaleza de la orquestación —sustituir rápidamente una instancia que
+Una fortaleza de la **orquestación** —sustituir rápidamente una instancia que
 falla— puede convertirse al mismo tiempo en una dificultad para la
 investigación: **el entorno original puede ser efímero**.
 
