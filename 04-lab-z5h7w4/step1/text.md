@@ -148,7 +148,7 @@ investigación: el entorno que existía cuando ocurrió un incidente puede haber
 sido sustituido cuando comienza el análisis.
 
 Kubernetes y Docker son tecnologías diferentes. Kubernetes puede utilizar
-distintos runtimes de contenedores y no necesita Docker para funcionar.
+distintos contenedores y no necesita Docker para funcionar.
 
 ### Servicio estable frente a Pod reemplazable
 
